@@ -1,0 +1,557 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(28, 28, 28, 0.9); /* gris oscuro translúcido */
+  padding: 10px 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-nav {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo-nav:hover {
+  transform: scale(1.05);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 110;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+  color: #AAAAAA;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  border-color: #7e71f0; /* morado vibrante */
+  background-color: rgba(126, 113, 240, 0.15);
+  color: #7e71f0;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 150px 20px 100px;
+  background: none;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-header {
+  height: 120px;
+  margin-bottom: 30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+header p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #4a3671; /* morado oscuro */
+  color: #eee;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #7e71f0; /* morado vibrante */
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(126, 113, 240, 0.7);
+}
+
+/* ===== SECCIONES ===== */
+section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== SERVICIOS ===== */
+.servicios {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.servicio {
+  background-color: rgba(34, 34, 34, 0.8);
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.servicio h3 {
+  font-size: 1.8em;
+  color: #7e71f0; /* morado vibrante */
+  margin-bottom: 15px;
+}
+
+.servicio p {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.imagen-servicio {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.imagen-servicio:hover {
+  transform: scale(1.03);
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(34, 34, 34, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+form label {
+  display: block;
+  font-size: 1.1em;
+  color: white;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #222;
+  color: white;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #7e71f0;
+  outline: none;
+}
+
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+form button {
+  background-color: #4a3671; /* morado oscuro */
+  color: #eee;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #7e71f0; /* morado vibrante */
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  text-align: center;
+  color: #bbb;
+  position: relative;
+  z-index: 1;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 0;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px 0;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .logo-nav {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .menu-icon {
+    order: 1;
+  }
+
+  header {
+    padding: 120px 20px 80px;
+  }
+  
+  header h1 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .servicio {
+    width: 90%;
+  }
+  
+  header {
+    padding: 100px 20px 60px;
+  }
+  
+  header h1 {
+    font-size: 1.8em;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+}
+
+/* === Video Cuadro === */
+.video-cuadro {
+  width: 80%;       /* Que ocupe el 80% del ancho del contenedor */
+  max-width: 900px; /* Máximo ancho para que no se pase de grande */
+  margin: 20px auto; /* Centrarlo y darle un poquito de margen */
+ 
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+.video-cuadro video {
+  width: 100%; /* Que el video ocupe todo el ancho del cuadro */
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Servicios (repetido, pero para flexbox) */
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.servicio {
+  flex: 1 1 220px; /* ancho mínimo de 220px, crece pero no se sale */
+  max-width: 250px; /* máximo ancho para que no se salga */
+  background-color: rgba(34, 34, 34, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.imagen-servicio {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.redes-sociales {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.redes-sociales a {
+  color: #7e71f0; /* morado vibrante */
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: #4a3671; /* morado oscuro */
+  transform: scale(1.2);
+  text-shadow: 0 0 10px #7e71f0;
+}
+.servicios {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.servicio {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-servicio {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+.carousel-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto 60px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgba(3, 3, 3, 0.85);
+  box-shadow: 0 0 15px rgba(29, 29, 31, 0.7);
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  animation: slide 20s linear infinite;
+}
+
+.carousel-image {
+  width: 140px;
+  height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-image:hover {
+  filter: brightness(1);
+  transform: scale(1.1);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-140px * 5 - 25px * 5)); /* 5 imágenes * ancho + gap */
+  }
+}
+body {
+  background-image: url("Imagenes/fn3.jpg"); /* Cambia la ruta por la imagen que quieras */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Orbitron', sans-serif;
+}
+.galeria {
+  padding: 60px 20px;
+  background-color: #0c0c0c;
+  color: white;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #444;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #6a5acd;
+}
+
+.item p {
+  padding: 10px;
+  font-size: 0.95rem;
+}
+.galeria {
+  padding: 60px 20px;
+  background-color: transparent; /* Lo dejamos transparente */
+  color: white;
+  text-align: center;
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: none; /* SIN FONDO */
+  box-shadow: none; /* SIN SOMBRA */
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #6a5acd; /* opcional: quita esto si no quieres bordes */
+}
+
+.item p {
+  padding: 10px;
+  font-size: 0.95rem;
+  color: white;
+}
+

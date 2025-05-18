@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAIE - Empresa de Redes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .servicios { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .servicio { background: #f0f0f0; padding: 15px; border-radius: 10px; width: 220px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .imagen-servicio { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+    .btn-servicio { margin-top: auto; background-color: #0d6efd; color: white; padding: 8px 15px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; display: inline-block; cursor: pointer; }
+    .btn-servicio:hover { background-color: #084dca; }
+    .btn { background-color: #0d6efd; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; transition: background-color 0.3s ease; cursor: pointer; }
+    .btn:hover { background-color: #084dca; }
+    footer { text-align: center; padding: 20px 10px; background-color: #222; color: #eee; position: relative; }
+    .redes-sociales { margin-top: 12px; }
+    .redes-sociales a { color: #eee; margin: 0 15px; font-size: 24px; transition: color 0.3s ease; }
+    .redes-sociales a:hover { color: #0d6efd; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <img src="Imagenes/Nodo_estelar-removebg-preview.png" alt="Logo Nodo Estelar" class="logo-nav" />
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#acerca">Acerca de Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header id="inicio">
+    <div class="container">
+      <img src="Imagenes/Nodo_estelar-removebg-preview.png" alt="Logo Nodo Estelar" class="logo-header" />
+      <h1>Bienvenido a NODO ESTELAR</h1>
+      <p>Tu empresa de redes de confianza</p>
+      <div class="video-cuadro">
+        <video autoplay muted loop>
+          <source src="video/Site.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a href="#servicios" class="btn">Nuestros Servicios</a>
+    </div>
+  </header>
+
+  <section id="acerca">
+    <h2>Acerca de Nosotros</h2>
+    <p>En Nodo Estelar, creemos que cada idea tiene su propio brillo...</p>
+    <a href="#servicios" class="btn">Descubre nuestros Servicios</a>
+  </section>
+
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <h3>Instalación de Redes</h3>
+        <p>Ofrecemos soluciones profesionales para la instalación...</p>
+        <img src="Imagenes/instalacion.webp" alt="Instalación de Redes" class="imagen-servicio" />
+        <a href="instalacion.html" class="btn-servicio">Instalación de Redes</a>
+      </div>
+      <div class="servicio">
+        <h3>Consultorías Técnicas</h3>
+        <p>Brindamos asesoría personalizada para optimizar tus sistemas...</p>
+        <img src="Imagenes/consultoria.jpg" alt="Consultorías Técnicas" class="imagen-servicio" />
+        <a href="consultoria.html" class="btn-servicio">Consultorías Técnicas</a>
+      </div>
+      <div class="servicio">
+        <h3>Mantenimiento y Soporte</h3>
+        <p>Nos encargamos de que tus redes funcionen siempre al 100%...</p>
+        <img src="Imagenes/mantenimiento.jpg" alt="Mantenimiento y Soporte" class="imagen-servicio" />
+        <a href="mantenimiento.html" class="btn-servicio">Mantenimiento y Soporte</a>
+      </div>
+      <div class="servicio">
+        <h3>Seguridad Informática</h3>
+        <p>Protegemos tus sistemas contra ataques y vulnerabilidades...</p>
+        <img src="Imagenes/segur.webp" alt="Seguridad Informática" class="imagen-servicio" />
+        <a href="seguridad.html" class="btn-servicio">Seguridad Informática</a>
+
+      </div>
+    </div>
+    <section id="portafolio" class="galeria">
+  <h2>🔌 Nuestro Portafolio</h2>
+  <div class="contenedor-galeria">
+    <div class="item">
+      <img src="portafolio/ofi.jpg" alt="Instalación de red 1">
+      <p>Instalación en oficina corporativa</p>
+    </div>
+    <div class="item">
+      <img src="portafolio/orden.jpg" alt="Instalación de red 2">
+      <p>Organización de cableado estructurado</p>
+    </div>
+    <div class="item">
+      <img src="portafolio/sw.jpg" alt="Instalación de red 3">
+      <p>Configuración de racks y switch</p>
+    </div>
+    <!-- Puedes duplicar más bloques .item -->
+  </div>
+</section>
+
+ 
+
+    <a href="#contacto" class="btn">Contáctanos</a>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas? Contáctanos y estaremos encantados de ayudarte.</p>
+    <form action="https://formspree.io/f/mvgaarkn" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="Tu correo" required />
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Nodo Estelar. Todos los derechos reservados.</p>
+    <div class="redes-sociales">
+      <a href="https://wa.me/5537760224" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61575990645728" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nodo.estelarorg/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+      if (res.ok) {
+        alert("¡Mensaje enviado con éxito!");
+        form.reset();
+      } else {
+        alert("Error al enviar el mensaje.");
+      }
+    });
+  </script>
+
+</body>
+</html>
